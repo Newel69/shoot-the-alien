@@ -1,0 +1,27 @@
+import turtle
+pen=turtle.Turtle()
+paper=turtle.Screen()
+paper.bgcolor("light blue")
+def move(x,y):
+    pen.up()
+    pen.goto(x,y)
+    pen.down()
+pen.left(90)
+def space(side,angle,side_,angle_,color):
+    pen.fillcolor(color)
+    pen.begin_fill()
+    for i in range(2):
+        pen.forward(side)
+        pen.right(angle)
+        pen.forward(side_)
+        pen.right(angle_)
+    pen.end_fill()
+move(-300,-300)
+space(400,90,200,90,"blue")
+move(-100,-300)
+space(300,90,300,90,"pink")
+move(200,-300)
+space(700,90,250,90,"red")
+move(250,-250)
+space(600,90,150,90,"light blue")
+input()

@@ -1,0 +1,28 @@
+import turtle
+pen=turtle.Turtle()
+paper = turtle.Screen()
+def triangle(side, angle, color, x, y):
+    pen.up()
+    pen.goto(x,y)
+    pen.down()
+    pen.fillcolor(color)
+    pen.begin_fill()
+    for i in range(3):
+        pen.forward(side)
+        pen.left(angle)
+    pen.end_fill()
+triangle(90,120,"dark green",0,0)
+triangle(120,120,"dark green",-15,-105)
+triangle(150,120,"dark green",-30,-235)
+pen.up()
+pen.goto(60,-235)
+pen.down()
+pen.fillcolor("brown")
+pen.begin_fill()
+for i in range(2):
+    pen.left(90)
+    pen.forward(-50)
+    pen.left(90)
+    pen.forward(30)
+pen.end_fill()
+input()
